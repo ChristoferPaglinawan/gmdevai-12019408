@@ -8,7 +8,7 @@ public class WaypointFollow : MonoBehaviour
     public UnityStandardAssets.Utility.WaypointCircuit circuit;
     int currentWaypointIndex = 0;
 
-    float speed = 5;
+    public float speed = 10;
     float rotSpeed = 3;
     float accuracy = 1;
 
