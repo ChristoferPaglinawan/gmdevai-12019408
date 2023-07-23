@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class AIControl : MonoBehaviour
+public class Agent2AIControl : MonoBehaviour
 {
     NavMeshAgent agent;
 
@@ -21,9 +21,13 @@ public class AIControl : MonoBehaviour
 
     public void Update() 
     {
-        if(canSeeTarget())
+        if(!canSeeTarget())
         {
-            CleverHide(); 
+            Wander();
+        }
+        else if(canSeeTarget())
+        {
+            CleverHide();
         }
     }
 
